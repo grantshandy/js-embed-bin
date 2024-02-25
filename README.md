@@ -1,5 +1,5 @@
 # js-embed-bin
-A [small script](https://raw.githubusercontent.com/grantshandy/js-embed-bin/main/js-embed-bin.py) for embedding binary data in JavaScript files. You may want to do this if you're in a constrained environment that only supports JS/HTML or potentially as a fallback if your webserver won't return the correct MIME type (*`application/wasm`, lol*).
+A small script implemented in both [javascript](https://raw.githubusercontent.com/grantshandy/js-embed-bin/main/js-embed-bin.js) and [python](https://raw.githubusercontent.com/grantshandy/js-embed-bin/main/js-embed-bin.py) for embedding binary data in JavaScript files. You may want to do this if you're in a constrained environment that only supports JS/HTML or potentially as a fallback if your webserver won't return the correct MIME type (*`application/wasm`, lol*).
 
 ```bash
  $ python js-embed-bin.py <example.wasm >example.js

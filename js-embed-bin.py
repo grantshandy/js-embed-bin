@@ -6,7 +6,7 @@ import base64
 
 parser = argparse.ArgumentParser(prog='js-embed-bin', description='A small script for embedding binary data in a javascript file.')
 parser.add_argument('--literals', action='store_true', help='Write bytes as hex literals in output template (takes more space but is more readable)')
-parser.add_argument('--literal-width', type=int, default=10, metavar='N', help='Width of byte literal array before a newline is inserted')
+parser.add_argument('--literal-width', type=int, default=10, metavar='N', help='Width of byte literal array before a newline is inserted (default 10)')
 parser.add_argument('--minify', action='store_true', help='Remove whitespace and newlines from output')
 args = parser.parse_args()
 
@@ -28,8 +28,7 @@ if args.literals:
     hex_arr = [hex(c) for c in wasm_bytes]
 
     if args.minify:
-        for byte in hex_arr:
-            bytestr += f'{byte},'
+        bytestr += ",".join(hex_arr)
     else:
         for i,byte in enumerate(hex_arr):
             bytestr += f'{byte}, '.ljust(6)
