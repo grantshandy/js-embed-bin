@@ -1,3 +1,5 @@
+# Copyright Grant Handy 2024 (MIT)
+
 import argparse
 import sys
 import base64
