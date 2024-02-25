@@ -18,7 +18,7 @@ WebAssembly
     .then(console.log);
 ```
 
-## Samples
+## Sample Output
 ```js
 // $ python js-embed-bin.py <example/example.wasm
 module.exports = Uint8Array.from(
